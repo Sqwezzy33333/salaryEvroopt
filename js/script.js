@@ -68,6 +68,11 @@ function render(value) {
    jsWrapper.innerHTML = html;
 };
 
+function deleteSalary(){
+   let html = '';
+   jsWrapper.innerHTML = html;
+}
+
 jsBtn.addEventListener('click', () => {
    var value = jsString.value;
    value = getStrings(value);
@@ -80,7 +85,9 @@ jsBtn.addEventListener('click', () => {
 });
 
 jsDelete.addEventListener('click', () => {
-   inputs.forEach(input => input.value = '')
+   inputs.forEach(input => input.value = '');
+   deleteSalary();
+
 });
 
 
